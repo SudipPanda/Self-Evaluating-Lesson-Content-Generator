@@ -63,7 +63,7 @@ def node_generate(state:LessonState)->dict:
 
 def node_evaluate(state:LessonState)->dict:
     # we are evaluating the output text here 
-    text_to_judge = evaluate(state['text_output'])
+    text_to_judge = evaluate(state['text_output'], state['llm_client'])
 
     #getting the memory here 
     memory: VectorMemory = state['memory']
